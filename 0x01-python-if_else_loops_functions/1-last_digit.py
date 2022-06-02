@@ -2,13 +2,13 @@
 import random
 number = random.randint(-1000, 1000)
 
-lastd = int(str(number)[-1])
-
-if number > 0 and lastd > 5:
-    print(f"Last digit of {number} is {lastd} and is greater than 5")
-elif lastd == 0:
-    print(f"Last digit of {number} is {lastd} and is 0")
-elif number > 0 and lastd < 6 and lastd != 0:
-    print(f"Last digit of {number} is {lastd} and is less than 6 and not 0")
-elif number < 0:
-    print(f"Last digit of {number} is -{lastd} and is less than 6 and not 0")
+lastd = number % 10 if number > 0 else int(repr(number)[-1]) * -1
+if (lastd > 5):
+    print("Last digit of {:d} is {:d} and is greater than 5"
+            .format(number, lastd))
+elif(lastd == 0):
+    print("Last digit of {:d} is {:d} and is 0"
+            .format(number, lastd))
+else:
+    print("Last digit of {:d} is {:d} and is less than 6 and not 0"
+            .format(number, lastd))
