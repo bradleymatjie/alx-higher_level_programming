@@ -3,5 +3,5 @@
 def print_list_list_integer(my_list=[]):
 
     for a in my_list:
-        print(f"{a}")
+        print("{a}".str.format(a))
 
